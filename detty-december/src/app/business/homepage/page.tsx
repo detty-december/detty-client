@@ -8,7 +8,6 @@ import styles from  '../../page.module.css'
 export default function Home() {
   return (
    <div>
-     <h1>Detty December</h1>
        <Box sx={{ flexGrow: 1 }}>
            <AppBar
                position="fixed"
@@ -24,6 +23,7 @@ export default function Home() {
                        justifyContent: 'space-evenly',
                    }}
                >
+                   <h1>Detty December</h1>
                    <Button variant="text" className={styles.event_buttons}>
                        My Events
                    </Button>
