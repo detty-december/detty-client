@@ -1,12 +1,10 @@
 'use client'
-import Image from 'next/image'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import styles from  '../../page.module.css'
+import styles from '../../page.module.css'
 
 export default async function Home() {
-
     return (
         <div>
             <Box sx={{flexGrow: 1}}>
@@ -34,10 +32,8 @@ export default async function Home() {
                     </Box>
                 </AppBar>
                 {/* Content of your app */}
-
+                <h1>No events has been added yet</h1>
             </Box>
-
-
         </div>
     )
 }
