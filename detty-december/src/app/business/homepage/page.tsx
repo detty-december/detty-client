@@ -6,6 +6,14 @@ import Typography from '@mui/material/Typography'
 import styles from '../../page.module.css'
 
 export default  function Home() {
+    fetch('http://localhost:8000')
+        .then((data)=>{
+            data.json()
+                .then((json)=>{
+                    // Read data
+                    console.log(json.message)
+                })
+        })
     return (
         <div>
             <Box sx={{display:{xs:'block', sm: 'none'}}}>
