@@ -3,5 +3,9 @@
 }
 
 
-
+.active_event_buttons{
+    color:white;
+    text-decoration: underline;
+    font-weight: bolder;
+}
 
