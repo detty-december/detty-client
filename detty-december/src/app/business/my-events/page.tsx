@@ -13,12 +13,13 @@ export default  function Home() {
     const fetchData = async () => {
         try {
             let requestData = {"userId" : localStorage.getItem('usedId')}
-            const response = await fetch('http://localhost:8000/api/v1/getEvents/', {
+            const response = await fetch('http://localhost:8000/api/v1/events/', {
                 method: "POST", // *GET, POST, PUT, DELETE, etc.
                 headers: {
                     "Content-Type": "application/json",
                 },
                 referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                credentials: 'include',
                 body: JSON.stringify(requestData),
             });
             setData(await response.json());
@@ -26,7 +27,7 @@ export default  function Home() {
             console.error(error)
         }
     };
-    fetchData().then(()=>{});
+    fetchData().then(()=>{console.log(data)});
     return (
         <div>
            <TopAppBar
